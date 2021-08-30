@@ -13,24 +13,25 @@ const setupInput = function (conn) {
 
 const handleUserInput = function (key) {
 // \u0003 maps to ctrl+c input
+// console.log('key pressed');
 if (key === '\u0003') {
   process.exit();
 }
 if (key === 'w') {
   console.log('w:' , key);
-  connection.while("Move: up");
+  connection.write("Move: up");
 }
 if (key === 'a') {
   console.log('a:' , key);
-  connection.while("Move: left");
+  connection.write("Move: left");
 }
 if (key === 's') {
   console.log('s:' , key);
-  connection.while("Move: down");
+  connection.write("Move: down");
 }
 if (key === 'd') {
   console.log('d:' , key);
-  connection.while("Move: right");
+  connection.write("Move: right");
 }
 };
 
